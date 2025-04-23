@@ -1,19 +1,45 @@
-#include <iostream>
-using namespace std;
-int main()
+#include <iostream>  // Подключаем библиотеку для ввода/вывода
+using namespace std; // Используем стандартное пространство имён
+
+int main() // Главная функция программы
 {
-    int x;
-    cin >> x;
-    switch (x)
+    int x; // Объявляем переменную x для хранения числа
+    
+    cin >> x; // Пользователь вводит число с клавиатуры
+    
+    switch (x) // Начинаем проверку значения переменной x
     {
-    case 1: cout << "понедельник"; break;
-    case 2: cout << "вторник"; break;
-    case 3: cout << "среда"; break;
-    case 4: cout << "четверг"; break;
-    case 5: cout << "пятница"; break;
-    case 6: cout << "суббота"; break;
-    case 7: cout << "воскресенье"; break;
-    default: cout << "вы ошиблись";
+    case 1: // Если x == 1
+        cout << "понедельник"; // Выводим день недели
+        break; // Выходим из switch
+        
+    case 2: // Если x == 2
+        cout << "вторник";
+        break;
+        
+    case 3: // Если x == 3
+        cout << "среда";
+        break;
+        
+    case 4: // Если x == 4
+        cout << "четверг";
+        break;
+        
+    case 5: // Если x == 5
+        cout << "пятница";
+        break;
+        
+    case 6: // Если x == 6
+        cout << "суббота";
+        break;
+        
+    case 7: // Если x == 7
+        cout << "воскресенье";
+        break;
+        
+    default: // Если x не равен 1-7
+        cout << "вы ошиблись"; // Сообщение об ошибке
     }
-    return 0;
+    
+    return 0; // Завершаем программу
 }
