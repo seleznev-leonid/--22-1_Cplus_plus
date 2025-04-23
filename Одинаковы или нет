@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "RUS");
+    
+    cout << "Проверка трехзначного числа на одинаковые цифры\n";
+    
+    int number;
+    cout << "Введите трехзначное число: ";
+    cin >> number;
+    
+    // Проверка корректности ввода
+    if (number < 100 || number > 999) {
+        cout << "Вы ввели некорректное число. Число должно быть трехзначным.\n";
+        return 1;
+    }
+    
+    // Извлечение цифр числа
+    int firstDigit = number / 100;           // Сотни
+    int secondDigit = (number / 10) % 10;    // Десятки
+    int thirdDigit = number % 10;            // Единицы
+    
+    // Проверка, равны ли все цифры первой цифре
+    if (firstDigit == secondDigit && firstDigit == thirdDigit) {
+        cout << "Все цифры числа равны первой цифре (" << firstDigit << ")\n";
+    } else {
+        cout << "Не все цифры числа равны первой цифре\n";
+    }
+    
+    return 0;
+}
